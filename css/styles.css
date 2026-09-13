@@ -5,6 +5,7 @@
 --muted: #5b6573;
 --surface: #f4f7fb;
 --white: #ffffff;
+--section-space: 72px;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -34,6 +35,13 @@ gap: 20px;
 .nav-links { display: flex; flex-wrap: wrap; gap: 18px; }
 .nav-links a { color: var(--ink); text-decoration: none; }
 .nav-links a:hover, .nav-links a:focus { color: var(--blue); }
+.nav-links a:active {
+    color: var(--navy);
+}
+.nav-links a:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+}
 .hero {
 min-height: 75vh;
 display: grid;
@@ -51,6 +59,20 @@ aspect-ratio: 1;
 object-fit: cover;
 border-radius: 50%;
 border: 8px solid #e8f1f8;
+animation: fadeIn 1s ease;
+transition: transform 300ms ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.profile-photo:hover {
+    transform: scale(1.10);
 }
 .button {
 display: inline-block;
@@ -60,15 +82,33 @@ color: var(--white);
 background: var(--blue);
 border-radius: 8px;
 text-decoration: none;
+transition: transform 200ms ease, background-color 200ms ease;
 }
-.section { padding-block: 72px; }
+.button:hover {
+    transform: translateY(-3px);
+    background-color: var(--navy);
+}
+.button:focus-visible {
+    outline: 3px solid var(--navy);
+    outline-offset: 3px;
+}
+.section {
+    padding-block: var(--section-space);
+}
 .alt-bg { background: var(--surface); }
-.skill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; justify-content: center;
+}
 .skill-list li {
 list-style: none;
 padding: 8px 12px;
 background: #e8f1f8;
 border-radius: 999px;
+    transition: transform 200ms ease, background-color 200ms ease;
+}
+.skill-list li:hover {
+    transform: translateY(-3px);
+    background-color: var(--blue);
+    color: var(--white);
 }
 .project-grid {
 display: grid;
@@ -78,8 +118,15 @@ gap: 24px;
 .card {
 background: var(--white);
 padding: 24px;
+margin: 10px;
+border: 1px solid #dfe5ec;
 border-radius: 12px;
 box-shadow: 0 8px 24px rgba(23, 54, 93, 0.08);
+transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(23, 54, 93, 0.12);
 }
 footer {
 padding: 24px;
@@ -92,4 +139,11 @@ border-top: 1px solid #dfe5ec;
 .profile-photo { max-width: 260px; margin: 0 auto; }
 .nav { flex-direction: column; padding-block: 14px; }
 .project-grid { grid-template-columns: 1fr; }
+ .nav-links {
+        justify-content: center;
+        gap: 12px;
+ }
+ .section {
+    padding-block: 48px;
+ }
 }
