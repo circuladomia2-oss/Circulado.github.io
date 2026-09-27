@@ -21,8 +21,8 @@ a { color: var(--blue); }
 .site-header {
 position: sticky;
 top: 0;
-background: rgba(245, 220, 234, 0.96);
-border-bottom: 1px solid #f4daed;
+background: rgb(247, 198, 226);
+border-bottom: 1px solid #f7bde7;
 }
 .nav {
 min-height: 68px;
