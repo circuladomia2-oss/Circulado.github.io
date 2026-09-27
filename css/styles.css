@@ -132,7 +132,7 @@ footer {
 padding: 24px;
 text-align: center;
 color: var(--muted);
-border-top: 1px solid #ecdfea;
+border-top: 1px solid #f0b7df;
 }
 @media (max-width: 720px) {
 .hero { grid-template-columns: 1fr; text-align: center; }
