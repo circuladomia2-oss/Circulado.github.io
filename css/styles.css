@@ -1,7 +1,7 @@
 :root {
---navy: #5d174a;
+--navy: #844874;
 --blue: #d4589c;
---ink: #33172c;
+--ink: #6f3e63;
 --muted: #735b6c;
 --surface: #f7c0e4;
 --white: #f8e6f0;
@@ -78,8 +78,8 @@ transition: transform 300ms ease;
 display: inline-block;
 margin-top: 12px;
 padding: 12px 18px;
-color: var(--white);
-background: var(--blue);
+color: var(--PINK);
+background: var(--PINK);
 border-radius: 8px;
 text-decoration: none;
 transition: transform 200ms ease, background-color 200ms ease;
